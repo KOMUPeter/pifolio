@@ -1,0 +1,259 @@
+/* ********css general******* */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@700&family=Montserrat:ital,wght@0,700;1,400;1,900&display=swap');
+:root{
+    --grey: 228, 225, 218;
+    --grey: 228, 225, 218;
+}
+body {
+    font-family: "Montserrat" sans-serif;  
+    background: linear-gradient(to top right, rgb(243, 228, 228), rgb(204, 194, 173));
+}
+html {
+    scroll-behavior: smooth;
+  }
+.container {
+    max-width: 1060px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-main {
+    margin: auto;
+    padding: 5px;
+	border:1px solid #0d0e0d;
+	display:inline-block;
+	cursor:pointer;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ********* #home header ********** */
+#header {
+    /* height: 85vh; */
+    text-align: center;
+    padding: 5px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#header nav {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+.navbar-links {
+    display: flex;
+    color: white;
+    font-weight: 600;
+}
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar-links li {
+    list-style: none;
+}
+.navbar-links ul a {
+    text-decoration: none;
+    color: inherit;
+    padding: 1rem;
+    display: block;
+}
+.navbar-links li a:hover {
+    background-color: rgb(24, 12, 55);
+    color: white;
+}
+#header .h1 {
+    margin: 60px 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+#header .h1 p {
+    padding: 60px 0;
+}
+#header .h1 i {
+    color: rgb(27, 25, 34);
+    padding: 10px;
+}
+#header .h1 img {
+    border-radius: 50%;
+}
+#profilePic img {
+    max-height: 300px;
+}
+.toggle-Button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    flex-direction: column;
+    display: none;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+.toggle-Button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(80, 77, 77);
+    border-radius: 10px;
+}
+/* ************** contacts popup*********** */
+.info {
+    display: none;
+    position: absolute;
+    background-color: rgba(24, 12, 55, 0.856);
+    border: 1px solid rgb(10, 10, 10);
+    padding: 5px;
+    width: 100%;
+text-align: center;
+animation: myAnim 2s ease 0s 1 normal forwards;
+  }
+  @keyframes myAnim {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+	40% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+
+	50% {
+		transform: scale3d(1.15, 0.85, 1);
+	}
+
+	65% {
+		transform: scale3d(0.95, 1.05, 1);
+	}
+
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+  #contacts {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  #contacts:hover .info {
+    display: block;
+  }
+  /* *********** #project ********** */
+  #project {
+    height: 600px;
+    background-color: aqua;
+  }
+/* ***********  #FOOTER ************ */
+#footer {
+    background-color: rgba(0, 0, 0, 0.986);
+    height: 15vh;
+    padding: 5px;
+}
+#footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+#footer ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
+#footer ul li a:hover {
+    color: rgb(102, 96, 131);
+}
+/* *********** RESPONSIVE ********** */
+@media screen and (max-width: 768px) {
+    header {
+        height: 100px;
+    }
+    #header .h1 {
+        margin: 30px 0;
+    }
+    #contacts {
+        margin-top: 40px;
+    }
+    #header .h1 i {
+        padding: 3px;
+    }
+    #profilePic img {
+        max-height: 200px;
+    }
+    #header .h1 p {
+        padding: 30px 0;
+    }
+    
+}
+@media screen and (max-width: 480px) {
+    .toggle-Button {
+        display: flex;
+    }
+    header {
+        /* height: 50vh; */
+    }
+    header nav {
+        display: block;
+    }
+    header .navbar-links li a:hover {
+        background-color: rgba(194, 202, 198, 0.821);
+    }
+    .navbar-links {
+        display: none;
+        margin-top: 10px;
+        width: 100%;
+    }
+    #header nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar-links ul li {
+        background-color: rgb(17, 17, 17);
+        text-align: center;
+    }
+    .navbar-links ul li a {
+        padding: 10px;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+    #header .h1 {
+        display: block;
+        margin: 10px 0;
+        gap: 0;
+    }
+    #header .h1 p {
+        padding: 20px 0;
+    }
+    #devIcons {
+        text-align: center;
+    }
+    #devIcons ul i {
+        justify-content: center !important;
+    }
+    #devIcons.active {
+        display: none;
+    }
+    #header .h1 i {
+        padding: 3px;
+        text-align: center;
+    }
+    #profilePic img {
+        max-height: 150px;
+    }
+    #profilePic {
+        margin-top: 30px;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+    }
+  } 
