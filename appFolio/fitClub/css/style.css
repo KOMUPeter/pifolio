@@ -1,0 +1,315 @@
+/* ********css general******* */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@700&family=Montserrat:ital,wght@0,700;1,400;1,900&display=swap');
+:root{
+    --violet: 124, 40, 99;
+}
+iframe {
+    display: block;
+}
+body {
+    font-family: "Montserrat" sans-serif;  
+}
+.container {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1 {
+    text-transform: uppercase;
+    font-style: italic; 
+    font-weight: 900;
+    font-size: 60px;
+}
+.btn {
+    color: white;
+    background-color: rgba(var(--violet));
+    padding: 10px;
+    display: inline-block;
+}
+.btn:hover {
+    transform: scale(1.1);
+    color: rgba(var(--violet));
+    background-color: white;
+}
+/* ******** header ******* */
+header {
+    background: linear-gradient(to top right, rgba(var(--violet), 0.5), rgba(0, 0, 0, 0.5)),url(../img/fitness.jpg)top fixed;
+    background-size: cover;
+    color: white;
+    padding: 20px;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+.toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+@media screen and (max-width: 676px) {
+    .toggle {
+        display: flex;
+    }
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header nav ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    header nav ul li {
+        text-align: center;
+        background-color: rgba(124, 40, 99, 0.287);
+    }
+    header nav ul li a {
+        padding: 10px;
+    }
+
+  } 
+header div {
+    text-align: center;
+    margin: 120px 0 200px;
+}
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+header nav img {
+    height: 60px;
+}
+.toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    flex-direction: column;
+    display: none;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+.toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* ******** MAIN ******* */
+/* ******** #programme******* */
+#programme {
+    margin-top: -100px;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+} 
+#programme a {
+    background-size: cover;
+    background-position: center;
+    color: white;text-align: center;
+    width: 100%;
+    padding: 80px 20px;
+}
+#programme a h2 {
+    text-transform: uppercase;
+}
+#programme a:first-child{
+    background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url(../img/fitnessman.jpg);
+}
+#programme a:last-child {
+    background-image:linear-gradient(rgba(var(--violet),0.7), rgba(var(--violet),0.7)),
+    url(../img/fitnesswoman.jpg);
+}
+/********* #objective****** */
+#objective {
+    text-align: center;
+}
+#objective div {
+    margin: 100px auto;
+}
+#objective ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+}
+#objective li {
+    width: 50%; 
+    border-top: 1px solid rgba(0, 0, 0, 0.301); 
+    padding: 30px;
+}
+#objective li:first-of-type,
+#objective li:nth-of-type(3) {
+    border-right: 1px solid rgba(0, 0, 0, 0.301);;
+}
+#objective ul img {
+    width: 48px;
+}
+/********* end of #objective****** */
+
+/*********#others****** */
+#others {
+    padding: 80px 0;
+    color: white;
+    background-color: black; 
+}
+
+/********* #info****** */
+#info {
+    margin: 0;
+    text-align: center;
+}
+ #info article {
+    padding:  50px;
+    display: inline-block;   
+ }
+ #info article:nth-of-type(odd){
+    background-color: rgba(128, 128, 128, 0.124);
+ }
+ #info article img {
+    height: 80px;
+ }
+ #info iframe {
+    width: 100%;
+ }
+
+/* ******footer********* */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+footer img{
+    height: 50px;
+}
+footer div a {
+    margin-right: 10px;
+}
+footer>div {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 50px;
+}
+footer #contact {
+    color: black;
+    position: relative;
+    background-color: white;
+    margin-top: -100px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 30px 0;
+}
+footer #contact form {
+    text-align: left;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer #contact input {
+    width: 100%;
+    display: block;
+    border-left: none;
+    border-right: none;
+    border-top: gray;
+    margin: 40px 0;  
+}
+footer ul li {
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+}
+footer ul i {
+    color: rgb(var(--violet));
+}
+footer ul li h3 {
+    margin: 0;
+
+}
+/** responsive ******* */
+@media screen and (min-width: 768px) {
+    #programme a {
+        width: 50%;
+    }
+    #objective ul li  {
+        width: 25%;
+    }
+    #objective ul li:nth-of-type(2) {
+        border-right: 1px solid rgba(0, 0, 0, 0.301);
+    }
+    #others {
+        background-image: linear-gradient(to right, rgba(var(--violet),0.4) 55%, rgb(10, 10, 10)55%),
+        url(../img/crossfit.jpg)
+        ;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    #others article {
+        width: 40%;
+        margin-left: auto;
+    }
+    #others article h2 {
+        margin-left: -100px;
+    }
+    #info div{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #info div article {
+        width: calc(100% / 3);
+    }
+    footer #contact {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer>div {
+        flex-direction: row;
+    }
+    footer>div aside{
+        order: -1;
+    }
+    footer > div >* {
+        padding: 50px 0;
+        width: calc(100% / 3);
+    }
+
+}
+
+
+
+/* @media screen and (max-width: 676px) {
+
+    .toggle {
+        display: flex;
+    }
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header nav ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    header nav ul li {
+        text-align: center;
+        background-color: rgba(124, 40, 99, 0.287);
+    }
+    header nav ul li a {
+        padding: 10px;
+    }
+  } */

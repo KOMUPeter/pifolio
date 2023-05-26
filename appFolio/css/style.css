@@ -1,12 +1,17 @@
 /* ********css general******* */
+/* ************************** */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@700&family=Montserrat:ital,wght@0,700;1,400;1,900&display=swap');
 :root{
     --grey: 228, 225, 218;
-    --grey: 228, 225, 218;
+    --grey: 204, 194, 173;
 }
 body {
     font-family: "Montserrat" sans-serif;  
     background: linear-gradient(to top right, rgb(243, 228, 228), rgb(204, 194, 173));
+}
+h2 {
+    font-size: 30px;
+    font-weight: bold;
 }
 html {
     scroll-behavior: smooth;
@@ -23,7 +28,6 @@ html {
 	display:inline-block;
 	cursor:pointer;
 }
-
 header nav {
     display: flex;
     justify-content: space-between;
@@ -31,7 +35,9 @@ header nav {
 }
 
 /* ********* #home header ********** */
+/* ********************************* */
 #header {
+    height: 85vh;
     text-align: center;
     padding: 5px;
     background-position: center;
@@ -46,7 +52,7 @@ header nav {
 }
 .navbar-links {
     display: flex;
-    color: white;
+    color: rgb(54, 3, 3);
     font-weight: 600;
 }
 .navbar-links ul {
@@ -69,7 +75,7 @@ header nav {
 }
 #header .h1 {
     margin: 60px 0;
-    color: white;
+    color: rgb(2, 31, 2);
     display: flex;
     justify-content: space-between;
 }
@@ -102,7 +108,23 @@ header nav {
     background-color: rgb(80, 77, 77);
     border-radius: 10px;
 }
+ .fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 /* ************** contacts popup*********** */
+/* **************************************** */
 .info {
     display: none;
     position: absolute;
@@ -133,7 +155,6 @@ animation: myAnim 2s ease 0s 1 normal forwards;
 		transform: scale3d(1, 1, 1);
 	}
 }
-
   #contacts {
     position: relative;
     cursor: pointer;
@@ -143,11 +164,50 @@ animation: myAnim 2s ease 0s 1 normal forwards;
     display: block;
   }
   /* *********** #project ********** */
+  /* ******************************* */
   #project {
-    height: 600px;
-    background-color: aqua;
+    background-color: beige;
   }
+  #project h2 {
+    padding-top: 20px;
+  }
+  #project div {
+    height: 150px;
+    border: 1px solid black;
+  }
+  #project .div1, #project .div3 {
+    margin-left: -12px;
+  }
+  #project .div2, #project .div4 {
+    margin-right: -12px;
+  }
+  .div1, .div2, .div3, .div4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .div1:hover, .div2:hover, .div3:hover, .div4:hover {
+    background-color: rgb(24, 12, 55);
+    color: white;
+    cursor: pointer;
+  }
+  .div1:hover h3, .div2:hover h3 , .div3:hover h3 , .div4:hover h3  {
+    animation: myAnim 2s ease 0s 3 normal forwards;
+  }
+  @keyframes myAnim {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0;
+	}
+}
 /* ***********  #FOOTER ************ */
+/* ********************************* */
 #footer {
     background-color: rgba(0, 0, 0, 0.986);
     height: 15vh;
@@ -168,9 +228,13 @@ animation: myAnim 2s ease 0s 1 normal forwards;
     color: rgb(102, 96, 131);
 }
 /* *********** RESPONSIVE ********** */
+/* ********************************* */
 @media screen and (max-width: 768px) {
+    #header {
+        height: 85vh;
+    }
     #header .h1 {
-        margin: 30px 0;
+        margin: 40px 0;
     }
     #contacts {
         margin-top: 40px;
@@ -184,6 +248,9 @@ animation: myAnim 2s ease 0s 1 normal forwards;
     #header .h1 p {
         padding: 30px 0;
     }
+    #devIcons p {
+        margin: 30px;
+    }
     
 }
 @media screen and (max-width: 480px) {
@@ -194,7 +261,7 @@ animation: myAnim 2s ease 0s 1 normal forwards;
         display: block;
     }
     header .navbar-links li a:hover {
-        background-color: rgba(194, 202, 198, 0.821);
+        background-color: rgba(46, 95, 72, 0.603);
     }
     .navbar-links {
         display: none;
@@ -206,11 +273,12 @@ animation: myAnim 2s ease 0s 1 normal forwards;
         align-items: flex-start;
     }
     .navbar-links ul {
+        margin-bottom: 50px;
         flex-direction: column;
         width: 100%;
     }
     .navbar-links ul li {
-        background-color: rgb(17, 17, 17);
+        background-color: rgba(17, 17, 17, 0.116);
         text-align: center;
     }
     .navbar-links ul li a {

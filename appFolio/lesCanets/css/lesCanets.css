@@ -1,0 +1,101 @@
+div {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* height: 100%; */
+    box-sizing: border-box;
+    margin: 0;
+}
+.header {
+    height: 100px;
+    background-color: rgb(11, 11, 12);
+    color: white;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+}
+section {
+    display: flex;
+    font-family: "Arial" sans-serif;
+    font-size: 1.2rem;
+}
+#zone-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#zone-1, #zone-2 {
+    width: 50%;
+    margin: 30px;
+}
+
+#zone-2 {
+   background-color: royalblue;
+}
+#choixCouleurs {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+}
+#choixCouleurs img {
+    width: 80px;
+    margin: 10px;
+    cursor: pointer;
+}
+#zone-2  h1 {
+    margin: 0;
+    color: white;
+    font-size: 1.8rem;
+}
+#zone-2 h2 {
+    margin-top: 20px;
+    color: black;
+    font-size: 1.4em;
+}
+#ligne {
+    width: 100%;
+    height: 40px;
+    font-size: 1.4em;
+}
+#zoneTexte {
+    /* border: 10px solid lime; */
+    width: 180px;
+    height: 400px;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    font-size: 1.4em;
+}
+#zone-2 h3 {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+.bt {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: 5px;
+}
+.bt:hover{
+    background-color: orange;
+}
+
+/* slide */
+@media screen and (max-width: 480px) {
+#choixCouleurs {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  #choixCouleurs img {
+    width: 100px;
+    height: 100px;
+    /* transition: transform 1s; */
+  }
+}

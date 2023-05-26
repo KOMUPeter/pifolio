@@ -1,0 +1,220 @@
+/* ************************************ */
+/* ***********GENERAL CSS************** */
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --color: (151, 1, 52);
+}
+.container {
+  max-width: 1060px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn {
+  color: white;
+  background-color: rgb(151, 1, 52);
+  padding: 10px;
+}
+.btn:hover {
+  transform: translateY(-5px);
+  transition: transform ease 1s;
+}
+/* ************************************ */
+/* *********** typography************** */
+body {
+  font-family: "Work Sans", sans-serif;
+  font-size: small;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Anton", sans-serif;
+  letter-spacing: 1px;
+}
+h2 {
+  font-weight: lighter;
+}
+h3 {
+  font-size: 12px;
+  font-weight: 400;
+}
+h1 {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 80px;
+}
+/* ************************************* */
+/* *************#header****************** */
+header {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../img/cinema.jpg);
+  text-align: center;
+  background-position: top;
+  background-size: cover;
+  color: white;
+  padding: 20px;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cormorant Unicase", serif;
+  justify-content: space-between;
+}
+header nav ul {
+  display: flex;
+  gap: 10px;
+}
+header nav img {
+  height: 40px;
+}
+header nav li a {
+  letter-spacing: 1px;
+}
+header h1 {
+    margin: 0;
+    padding: 0;
+}
+header nav li a:hover {
+  background-color: rgba(151, 1, 51, 0.493);
+  padding: 5px;
+  transform: translateY(-5px);
+  transition: transform ease 1s;
+}
+header .title {
+  margin: 150px 0;
+}
+.toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  flex-direction: column;
+  display: none;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+.toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+/* ************************************* */
+/* ************* #concept ************** */
+#concept {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  padding: 50px 0;
+}
+#concept img {
+  max-height: 250px;
+  max-width: 250px;
+}
+/* ************************************* */
+/* ************* #programme ************** */
+#programme {
+  background-image: linear-gradient(
+      to top,
+      rgba(13, 13, 13, 0.2),
+      hsla(60, 100%, 50%, 0.1)
+    ),
+    url("../img/salle.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#programme ul {
+  display: flex;
+  gap: 30px;
+}
+#programme ul li {
+  border: 1px solid white;
+  background-color: rgba(37, 7, 7, 0.356);
+}
+#programme ul li hr {
+  max-width: 90%;
+}
+/* ************************************* */
+/* ************* #abonnement *********** */
+#abonnement {
+  text-align: center;
+  padding: 50px 0;
+}
+#abonnement ul {
+  display: flex;
+  color: white;
+  gap: 30px;
+  justify-content: space-between;
+}
+#abonnement ul li {
+  padding: 10px 0;
+  width: calc(100% / 3);
+  background-color: rgb(151, 1, 52);
+}
+#abonnement ul li hr {
+  border: none;
+  width: 90%;
+  height: 2px;
+  background-color: white;
+}
+#abonnement ul li h3 {
+  padding: 10px 0;
+}
+/* ************************** */
+/* ******** footer*********** */
+footer {
+  text-align: center;
+}
+footer hr {
+  height: 1px;
+  border: none;
+  background-color: rgb(151, 1, 52);
+}
+/* ************************************* */
+/* ************* responsive *********** */
+@media screen and (max-width: 667px) {
+  header nav ul {
+    display: none;
+  }
+  .toggle {
+    display: flex;
+  }
+  #concept {
+    display: block;
+    text-align: center;
+  }
+  #concept div {
+    display: block;
+  }
+  #programme ul {
+    display: block;
+  }
+  #programme ul li {
+    margin: 20px 0;
+  }
+  #abonnement ul {
+    display: block;
+    text-align: center;
+  }
+  #abonnement ul li {
+    margin: 20px;
+  }
+  #abonnement ul li,
+  #programme ul li {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
