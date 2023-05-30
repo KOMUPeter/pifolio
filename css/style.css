@@ -9,6 +9,10 @@ body {
     font-family: "Montserrat" sans-serif;  
     background: linear-gradient(to top right, rgb(243, 228, 228), rgb(204, 194, 173));
 }
+#logo {
+    max-width: 30px;
+    max-height: 30px;
+}
 h2 {
     font-size: 30px;
     font-weight: bold;
@@ -210,7 +214,6 @@ animation: myAnim 2s ease 0s 1 normal forwards;
 /* ********************************* */
 #footer {
     background-color: rgba(0, 0, 0, 0.986);
-    height: 15vh;
     padding: 5px;
 }
 #footer ul {
@@ -222,10 +225,86 @@ animation: myAnim 2s ease 0s 1 normal forwards;
 #footer ul li a {
     text-decoration: none;
     color: white;
-    padding: 20px;
+    padding: 10px;
 }
 #footer ul li a:hover {
     color: rgb(102, 96, 131);
+}
+/* *************PAGE COMPETENCE************* */
+/* ***************************************** */
+#cv {
+    height: 100px;
+}
+
+#pdf {
+    background-color: blueviolet;
+    border-radius: 10px;
+}
+#cv .navbar-links li {
+    padding-top: 20px;
+}
+#competence {
+    border: 1px solid rgb(0, 0, 0);
+}
+#competence h2 {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+#competence aside {
+    background-color: #241c1d;
+    color: whitesmoke;
+    padding-left: 20px;
+}
+#competence aside ul li i {
+    padding: 0 30px;
+}
+#competence aside h2 {
+    margin-top: 50px;
+}
+#competence aside ul {
+    margin-top: 20px;
+}
+#competence aside li {
+  margin-left: 50px;  
+}
+#competence main {
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#competence main div {
+    display: flex;
+    justify-content: space-between;
+}
+#competence main div h4 {
+    font-weight: bold;
+}
+#competence main li {
+    margin-left: 20px;
+}
+#competence main h3 {
+    font-weight: bold;
+}
+#cvProfileB {
+    background-color: #ffffff;
+    padding: 30px;
+}
+#whiteB {
+    background-color: #241c1d;
+    padding: 30px;
+}
+#cvProfile {
+    justify-content: space-between;
+    display: flex;
+    background-color: rgb(72, 72, 196);
+    color: white;
+}
+#cvProfile img {
+    max-height: 200px;
+    border-radius: 45%;
+    background-position: center;
+    background-size: cover;
+    margin-left: 10px;
 }
 /* *********** RESPONSIVE ********** */
 /* ********************************* */
@@ -234,7 +313,7 @@ animation: myAnim 2s ease 0s 1 normal forwards;
         height: 85vh;
     }
     #header .h1 {
-        margin: 40px 0;
+        padding: 10px;
     }
     #contacts {
         margin-top: 40px;
@@ -251,7 +330,13 @@ animation: myAnim 2s ease 0s 1 normal forwards;
     #devIcons p {
         margin: 30px;
     }
-    
+    /* page competences */
+    #cvProfile h1{
+        font-size: 16px;
+    }
+    #cvProfile img {
+        max-height: 140px;
+    }
 }
 @media screen and (max-width: 480px) {
     .toggle-Button {
@@ -312,9 +397,39 @@ animation: myAnim 2s ease 0s 1 normal forwards;
         max-height: 150px;
     }
     #profilePic {
-        margin-top: 30px;
+        margin-top: 60px;
         justify-content: space-between;
         display: flex;
         align-items: center;
+    }
+    /* page competence */
+    #cv {
+        height: 150px;
+    }
+    #cv .navbar-links li {
+        padding-top: 0;
+    }
+    #pdf {
+        border-radius: 0;
+    }
+    #whiteB {
+        background-color: #ffffff;
+        padding: 30px;
+    }
+    #cvProfileB {
+        background-color: #241c1d;
+        padding: 30px;
+    }
+    #cvProfile img {
+        max-height: 80px;
+    }
+    #competence main li, #competence aside li, #competence h2 {
+        margin-left: 0;
+    }
+    #competence h2 {
+        font-size: 16px;
+    }
+    #cvProfile h1{
+        font-size: 12px;
     }
   } 
