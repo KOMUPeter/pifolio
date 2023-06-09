@@ -25,6 +25,21 @@ html {
     margin-left: auto;
     margin-right: auto;
 }
+i:hover {
+    animation: myAnim 1s ease 0s 1 normal forwards;
+    cursor: pointer;
+}
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: rotate(-540deg) scale(0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: rotate(0) scale(1);
+	}
+}
 .btn-main {
     margin: auto;
     padding: 5px;
@@ -170,7 +185,7 @@ animation: myAnim 2s ease 0s 1 normal forwards;
   /* *********** #project ********** */
   /* ******************************* */
   #project {
-    background-color: beige;
+    background-color: rgb(255, 255, 255);
   }
   #project h2 {
     padding-top: 20px;
@@ -428,6 +443,9 @@ animation: myAnim 2s ease 0s 1 normal forwards;
     }
     #competence h2 {
         font-size: 16px;
+    }
+    #competence aside div  {
+       margin-top: 180px;
     }
     #cvProfile h1{
         font-size: 12px;
